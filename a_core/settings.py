@@ -17,7 +17,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # Project title displayed in the header
-PROJECT_TITLE = "Project Title"
+PROJECT_TITLE = "Poda mada"
 
 
 # SECURITY WARNING: keep the secret key used in production secret!
@@ -34,6 +34,7 @@ CSRF_TRUSTED_ORIGINS = [ 'https://*' ]
 # Application definition
 
 INSTALLED_APPS = [
+    "daphne",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -45,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'allauth',
     'allauth.account',
+    'a_rtchat',
 
     # My apps
     'a_home',
@@ -95,7 +97,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'a_core.wsgi.application'
+# WSGI_APPLICATION = 'a_core.wsgi.application'
+ASGI_APPLICATION = "a_core.asgi.application"
 
 
 # Database
